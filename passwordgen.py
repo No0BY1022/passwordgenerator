@@ -5,7 +5,7 @@ import string
 name = str(input("Name of the password: "))
 letters = str(input("Include letters (y/n): "))
 symbols = str(input("Include symbols (y/n): "))
-numbers = str(input("Include numbers (y/n): "))
+numbers = str(input("Include numbersgut (y/n): "))
 length = int(input("Length: "))
 
 def generate_random_letters(x):
@@ -22,8 +22,8 @@ def generate_random_symbols(z):
 result = ""
 
 total_length = length
-num_letters = 0 if letters.lower() != 'y' else total_length // 3
-num_symbols = 0 if symbols.lower() != 'y' else total_length // 3
+num_letters = 0 if letters.lower() != 'y' else total_length // 2
+num_symbols = 0 if symbols.lower() != 'y' else total_length // 2
 num_numbers = 0 if numbers.lower() != 'y' else total_length - num_letters - num_symbols
 
 if num_letters > 0:
